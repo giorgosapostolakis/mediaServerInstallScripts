@@ -33,3 +33,10 @@ We can also setup a torrent client to download media and store them into our sha
 
 # Firewall setup
 A firewall could be configured using the interface of open media vault or ufw
+
+# Pihole setup
+Before running the docker compose file run the following commands:
+sudo systemctl stop systemd-resolved.service
+sudo systemctl disable systemd-resolved.service
+sudo nano /etc/resolv.conf and edit the nameserver to another dns nameserver
+If running openmediavault you might have to change the port of its web UI. Also the password for pihole is specified inside the docker compose file.
